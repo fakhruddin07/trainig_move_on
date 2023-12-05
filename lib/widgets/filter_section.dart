@@ -110,7 +110,7 @@ class _FilterSectionState extends State<FilterSection> {
                                   side: const BorderSide(color: kDDDDDD),
                                   shape: RoundedRectangleBorder(
                                     borderRadius:
-                                        BorderRadius.circular(AppPadding.p2),
+                                        BorderRadius.circular(AppRadius.r2),
                                   ),
                                 ),
                               ),

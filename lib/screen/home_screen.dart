@@ -1,4 +1,7 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:training_moveon/screen/check_list_tile_widget.dart';
 import 'package:training_moveon/screen/checkout_screen.dart';
 import 'package:training_moveon/screen/dart_flutter_dev_tool/flutter_inspector_demo.dart';
 import 'package:training_moveon/screen/description_of_cartoon.dart';
@@ -101,7 +104,17 @@ class HomeScreen extends StatelessWidget {
           AppSpacing.verticalSpacing2,
           ElevatedButton(
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const FlutterInspectorDemo(),),);
+              log(
+                "Log Event: Flutter Inspector Demo",
+                name: "flutterInspectorLog",
+                error: const FlutterInspectorDemo(),
+              );
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const FlutterInspectorDemo(),
+                ),
+              );
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: kBaseColor,
@@ -125,12 +138,36 @@ class HomeScreen extends StatelessWidget {
                 context: context,
                 builder: (context) => const FilterScreen(),
               );
+              log(
+                "message",
+              );
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: kBaseColor,
             ),
             child: Text(
               "Filter Screen",
+              style: getBoldStyle(
+                color: kWhiteColor,
+                fontSize: FontSize.s16,
+              ),
+            ),
+          ),
+          AppSpacing.verticalSpacing2,
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const CheckListTileWidget(),
+                ),
+              );
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: kBaseColor,
+            ),
+            child: Text(
+              "Check List Tile Widget",
               style: getBoldStyle(
                 color: kWhiteColor,
                 fontSize: FontSize.s16,

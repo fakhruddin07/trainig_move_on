@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:training_moveon/core/widgets/custom_drop_down.dart';
 import 'package:training_moveon/core/widgets/custom_image.dart';
@@ -50,8 +52,8 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
           children: [
             IconButton(
               onPressed: () {
-                // Navigator.pop(context);
-              },
+                Navigator.pop(context);
+              },alignment: Alignment.centerLeft,
               style: IconButton.styleFrom(
                 splashFactory: NoSplash.splashFactory,
                 backgroundColor: Colors.transparent,
@@ -64,7 +66,6 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                 color: kBlackColor,
               ),
             ),
-            AppSpacing.horizontalSpacing8,
             Text(
               "Checkout",
               style: getBoldStyle(
