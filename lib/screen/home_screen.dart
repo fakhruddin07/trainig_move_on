@@ -12,6 +12,7 @@ import 'package:training_moveon/utility/constants/app_spacing.dart';
 import '../utility/constants/colors.dart';
 import '../utility/constants/font_manager.dart';
 import '../utility/constants/style_manager.dart';
+import 'custom_scroll_view_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -168,6 +169,27 @@ class HomeScreen extends StatelessWidget {
             ),
             child: Text(
               "Check List Tile Widget",
+              style: getBoldStyle(
+                color: kWhiteColor,
+                fontSize: FontSize.s16,
+              ),
+            ),
+          ),
+          AppSpacing.verticalSpacing2,
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const CustomScrollViewWidget(),
+                ),
+              );
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: kBaseColor,
+            ),
+            child: Text(
+              "CustomScrollView",
               style: getBoldStyle(
                 color: kWhiteColor,
                 fontSize: FontSize.s16,

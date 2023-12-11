@@ -15,6 +15,7 @@ const kF7A02E = Color(0xFFF7A02E);
 const kA0A0A0 = Color(0xFFA0A0A0);
 const k707070 = Color(0xFF707070);
 const k0075D3 = Color(0xFF0075D3);
+const k88B34C = Color(0xFF88B34C);
 const kBottomNavActiveColor = Color(0xFF8EC640);
 const kWhiteColor = Color(0xFFFFFFFF);
 const kBlackColor = Color(0xFF01120E);

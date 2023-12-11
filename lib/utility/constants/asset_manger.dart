@@ -11,6 +11,8 @@ class ImageAssets {
   static String dropUpBtn = "$IMAGE_PATH/dropUpBtn.png";
   static String dropDownBtn = "$IMAGE_PATH/dropDownBtn.png";
   static String star = "$IMAGE_PATH/star.png";
+  static String sliderPng = "$IMAGE_PATH/sliderPng.png";
+  static String truckPng = "$IMAGE_PATH/truck_png.png";
 }
 
 class JsonAssets {
