@@ -1,26 +1,80 @@
 import 'package:flutter/material.dart';
-import 'package:training_moveon/widgets/product_details_widget/product_details_header.dart';
+import 'package:training_moveon/screen/product_details_screen/product_details_widget/product_details_header.dart';
 
-import '../../core/widgets/custom_rating_bar.dart';
-import '../../utility/constants/app_spacing.dart';
-import '../../utility/constants/colors.dart';
-import '../../utility/constants/font_manager.dart';
-import '../../utility/constants/style_manager.dart';
-import '../../utility/constants/values_manager.dart';
+import '../../../core/widgets/custom_rating_bar.dart';
+import '../../../utility/constants/app_spacing.dart';
+import '../../../utility/constants/colors.dart';
+import '../../../utility/constants/font_manager.dart';
+import '../../../utility/constants/style_manager.dart';
+import '../../../utility/constants/values_manager.dart';
 
-class SellerInformation extends StatelessWidget {
+class SellerInformation extends StatefulWidget {
   const SellerInformation({
     super.key,
   });
 
   @override
+  State<SellerInformation> createState() => _SellerInformationState();
+}
+
+class _SellerInformationState extends State<SellerInformation> {
+  final ScrollController _scrollController = ScrollController();
+  double top = 0;
+  @override
   Widget build(BuildContext context) {
     return SliverPadding(
       padding: const EdgeInsets.only(
-          left: AppPadding.p16, top: AppPadding.p16, bottom: AppPadding.p16),
+          left: AppPadding.p16, top: AppPadding.p16, bottom: AppPadding.p16,),
       sliver: SliverList(
         delegate: SliverChildListDelegate(
           [
+            LayoutBuilder(
+              builder: (context, constraints) {
+                top = constraints.biggest.height;
+                return AnimatedOpacity(
+                  duration: const Duration(milliseconds: 300),
+                  opacity: top <= 867 ? 1.0 : 0.0,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          _scrollController.animateTo(
+                              867,
+                              duration: const Duration(seconds: 3),
+                              curve: Curves.linear);
+                        },
+                        child: Text(
+                          "Seller information",
+                          style: getBoldStyle(
+                              color: kTextBlackColor, fontSize: 10),
+                        ),
+                      ),
+                      InkWell(
+                        onTap: (){
+                          _scrollController.jumpTo(1632);
+                        },
+                        child: Text(
+                          "Reviews",
+                          style: getBoldStyle(
+                              color: kTextBlackColor, fontSize: 10),
+                        ),
+                      ),
+                      InkWell(
+                        onTap: (){
+                          _scrollController.jumpTo(2357);
+                        },
+                        child: Text(
+                          "Product Descriptions",
+                          style: getBoldStyle(
+                              color: kTextBlackColor, fontSize: 10),
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ),
             const ProductDetailsHeader(headerTitle: "Seller Information"),
             AppSpacing.verticalSpacing16,
             const Row(

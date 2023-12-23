@@ -25,6 +25,7 @@ const kF2C881 = Color(0xFFF2C881);
 const kFF4C4C = Color(0xFFFF4C4C);
 const kF3F5F4 = Color(0xFFF3F5F4);
 const kECFAF3 = Color(0xFFECFAF3);
+const kTransparent = Colors.transparent;
 
 const kLightGreyColor = Color(0xFFF4ECFF);
 const kLightGreyVariantColor = Color(0xFFFFF7EB);

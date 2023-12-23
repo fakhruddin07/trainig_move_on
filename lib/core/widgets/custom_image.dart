@@ -8,7 +8,7 @@ class CustomImage extends StatelessWidget {
   double? imgWidth;
   BoxFit? imgFit;
   BoxShape boxShape;
-  double? borderRadius;
+  double borderRadius;
 
   CustomImage({
     super.key,
@@ -17,7 +17,7 @@ class CustomImage extends StatelessWidget {
     this.imgWidth,
     this.imgFit,
     this.boxShape = BoxShape.rectangle,
-    this.borderRadius,
+    this.borderRadius = 0,
   });
 
   @override
@@ -30,7 +30,7 @@ class CustomImage extends StatelessWidget {
         imageBuilder: (context, imageProvider) => Container(
           decoration: BoxDecoration(
             shape: boxShape,
-            borderRadius: BorderRadius.circular(borderRadius ?? 1),
+            borderRadius: BorderRadius.circular(borderRadius),
             image: DecorationImage(
                 image: imageProvider,
                 fit: imgFit ?? BoxFit.cover,

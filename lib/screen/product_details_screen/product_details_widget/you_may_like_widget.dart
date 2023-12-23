@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:training_moveon/core/widgets/custom_rating_bar.dart';
+import 'package:training_moveon/screen/product_details_screen/product_details_widget/product_details_header.dart';
 import 'package:training_moveon/utility/constants/font_manager.dart';
 import 'package:training_moveon/utility/constants/values_manager.dart';
-import 'package:training_moveon/widgets/product_details_widget/product_details_header.dart';
 
-import '../../utility/constants/app_spacing.dart';
-import '../../utility/constants/colors.dart';
-import '../../utility/constants/style_manager.dart';
+import '../../../utility/constants/app_spacing.dart';
+import '../../../utility/constants/colors.dart';
+import '../../../utility/constants/style_manager.dart';
 
 class YouMayLike extends StatelessWidget {
   const YouMayLike({super.key});

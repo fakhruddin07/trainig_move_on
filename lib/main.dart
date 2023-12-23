@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:training_moveon/screen/home_screen.dart';
+import 'package:training_moveon/screen/home/home_screen.dart';
 import 'package:training_moveon/utility/constants/colors.dart';
 
 void main() {
@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
+      initialRoute: "/",
       home: const HomeScreen(),
     );
   }

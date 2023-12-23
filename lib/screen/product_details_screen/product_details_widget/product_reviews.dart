@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:training_moveon/core/widgets/custom_rating_bar.dart';
+import 'package:training_moveon/screen/product_details_screen/product_details_widget/product_details_header.dart';
 import 'package:training_moveon/utility/constants/app_spacing.dart';
 import 'package:training_moveon/utility/constants/colors.dart';
 import 'package:training_moveon/utility/constants/font_manager.dart';
 import 'package:training_moveon/utility/constants/style_manager.dart';
 import 'package:training_moveon/utility/constants/values_manager.dart';
-import 'package:training_moveon/widgets/product_details_widget/product_details_header.dart';
 
-class ProductReviews extends StatelessWidget {
+class ProductReviews extends StatefulWidget {
   const ProductReviews({super.key});
+
+  @override
+  State<ProductReviews> createState() => _ProductReviewsState();
+}
+
+class _ProductReviewsState extends State<ProductReviews> {
+  GlobalKey targetedKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +27,7 @@ class ProductReviews extends StatelessWidget {
             const ProductDetailsHeader(headerTitle: "Reviews"),
             AppSpacing.verticalSpacing16,
             Row(
+              key: targetedKey,
               children: [
                 Text(
                   "Overall rating",

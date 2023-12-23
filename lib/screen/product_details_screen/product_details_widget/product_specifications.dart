@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:training_moveon/screen/product_details_screen/product_details_widget/product_details_header.dart';
 import 'package:training_moveon/utility/constants/app_spacing.dart';
 import 'package:training_moveon/utility/constants/colors.dart';
 import 'package:training_moveon/utility/constants/style_manager.dart';
-import 'package:training_moveon/widgets/product_details_widget/product_details_header.dart';
 
-import '../../utility/constants/values_manager.dart';
+import '../../../utility/constants/values_manager.dart';
 
 class ProductSpecifications extends StatelessWidget {
   const ProductSpecifications({

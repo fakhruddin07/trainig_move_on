@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:training_moveon/core/widgets/custom_drop_down.dart';
 import 'package:training_moveon/core/widgets/custom_image.dart';
@@ -24,7 +22,7 @@ class CheckOutScreen extends StatefulWidget {
 }
 
 class _CheckOutScreenState extends State<CheckOutScreen> {
-  String selectedCountryValue = "select Country";
+  String selectedCountryValue = "Select Country";
   String selectedDistrictValue = "Select District";
 
   final GlobalKey<FormState> _globalKey = GlobalKey<FormState>();
@@ -323,7 +321,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                             child: CustomDropDown(
                               controller: _districtOverlayPortalController,
                               selectedValue: selectedDistrictValue,
-                              isExpanded: true,
+                              isExpanded: false,
                               child: ListView(
                                 shrinkWrap: true,
                                 // physics: const NeverScrollableScrollPhysics(),

@@ -13,6 +13,9 @@ class ImageAssets {
   static String star = "$IMAGE_PATH/star.png";
   static String sliderPng = "$IMAGE_PATH/sliderPng.png";
   static String truckPng = "$IMAGE_PATH/truck_png.png";
+  static String welcomeLogoPng = "$IMAGE_PATH/welcome_logo.png";
+  static String stepperLogoPng = "$IMAGE_PATH/stepper_logo.png";
+  static String customerServicePng = "$IMAGE_PATH/customer_service.png";
 }
 
 class JsonAssets {

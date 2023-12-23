@@ -1,10 +1,9 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_widget_from_html_core/flutter_widget_from_html_core.dart';
+import 'package:training_moveon/screen/product_details_screen/product_details_widget/product_details_header.dart';
 import 'package:training_moveon/utility/constants/values_manager.dart';
-import 'package:training_moveon/widgets/product_details_widget/product_details_header.dart';
 
 class ProductDescription extends StatefulWidget {
   const ProductDescription({super.key});
@@ -23,7 +22,6 @@ class _ProductDescriptionState extends State<ProductDescription> {
     _item = data;
     setState(() {});
   }
-
   late String htmlContent = _item["data"];
 
   @override
@@ -45,24 +43,8 @@ class _ProductDescriptionState extends State<ProductDescription> {
             ),
             child: ProductDetailsHeader(headerTitle: "Product Descriptions"),
           ),
-          /*SliverToBoxAdapter(
-            child: HtmlWidget(htmlContent),
-          ),*/
+          // Expanded(child: HtmlWidget(htmlContent),),
           // HtmlWidget(htmlContent),
-          /*ListView.separated(
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            itemCount: 3,
-            separatorBuilder: (context, index) => addH(AppSize.s8),
-            itemBuilder: (context, index) {
-              return Image.network(
-                "https://source.unsplash.com/random?sig=$index",
-                fit: BoxFit.fill,
-                height: 328,
-                width: 360,
-              );
-            },
-          )*/
         ],
       ),
     );

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../utility/constants/colors.dart';
-import '../../utility/constants/font_manager.dart';
-import '../../utility/constants/style_manager.dart';
+import '../../../utility/constants/colors.dart';
+import '../../../utility/constants/font_manager.dart';
+import '../../../utility/constants/style_manager.dart';
+
 
 
 class ProductDetailsHeader extends StatelessWidget {

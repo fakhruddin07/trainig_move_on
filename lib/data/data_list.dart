@@ -38,5 +38,16 @@ List<String> districtsList = [
   "Chattogram",
   "Coxsbazar",
   "Khagrachhari",
+  "Bandarban",
+  "Cumilla",
+  "Feni",
+  "Brahmanbaria",
+  "Rangamati",
+  "Noakhali",
+  "Chandpur",
+  "Lakshmipur",
+  "Chattogram",
+  "Coxsbazar",
+  "Khagrachhari",
   "Bandarban"
 ];
