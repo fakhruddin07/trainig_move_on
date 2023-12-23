@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../utility/constants/app_spacing.dart';
-import '../utility/constants/colors.dart';
-import '../utility/constants/font_manager.dart';
-import '../utility/constants/style_manager.dart';
-import '../utility/constants/values_manager.dart';
-import '../widgets/filter_section.dart';
+import '../../utility/constants/app_spacing.dart';
+import '../../utility/constants/colors.dart';
+import '../../utility/constants/font_manager.dart';
+import '../../utility/constants/style_manager.dart';
+import '../../utility/constants/values_manager.dart';
+import 'filter_widget/filter_section.dart';
 
 class FilterScreen extends StatefulWidget {
   const FilterScreen({super.key});

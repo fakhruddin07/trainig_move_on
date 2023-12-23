@@ -6,7 +6,7 @@ import 'package:training_moveon/utility/constants/colors.dart';
 import 'package:training_moveon/utility/constants/font_manager.dart';
 import 'package:training_moveon/utility/constants/style_manager.dart';
 
-import '../utility/constants/values_manager.dart';
+import '../../utility/constants/values_manager.dart';
 
 class Items extends StatelessWidget {
   const Items({super.key});

@@ -15,14 +15,14 @@ import 'package:training_moveon/utility/constants/font_manager.dart';
 import 'package:training_moveon/utility/constants/style_manager.dart';
 import 'package:training_moveon/utility/constants/values_manager.dart';
 
-class CustomScrollViewWidget extends StatefulWidget {
-  const CustomScrollViewWidget({super.key});
+class ProductDetailsScreen extends StatefulWidget {
+  const ProductDetailsScreen({super.key});
 
   @override
-  State<CustomScrollViewWidget> createState() => _CustomScrollViewWidgetState();
+  State<ProductDetailsScreen> createState() => _ProductDetailsScreenState();
 }
 
-class _CustomScrollViewWidgetState extends State<CustomScrollViewWidget> {
+class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
   late ScrollController _scrollController;
   final GlobalKey globalKey1 = GlobalKey();
   final List<String> _sizeList = ["S", "M", "L", "XL"];
@@ -36,7 +36,7 @@ class _CustomScrollViewWidgetState extends State<CustomScrollViewWidget> {
     if (_scrollController.offset >= 700) {
       setState(() {
         isSliverAppBarHide = true;
-        print("OFFSET = ${_scrollController.offset}");
+        // print("OFFSET = ${_scrollController.offset}");
       });
     } else {
       setState(() {

@@ -16,7 +16,7 @@ class SpStreamJson2 extends StatefulWidget {
 }
 
 class _SpStreamJson2State extends State<SpStreamJson2> {
-  Person p1 = Person(name: "Fakhruddin Noman", age: 31);
+  Person p1 = Person(name: "F. A. Noman", age: 31000);
   SpJsonPlugin spJsonPlugin = SpJsonPlugin();
 
   @override

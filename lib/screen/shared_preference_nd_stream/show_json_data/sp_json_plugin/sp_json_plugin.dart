@@ -18,8 +18,7 @@ class SpJsonPlugin{
 
   Future<void> getJson() async{
     final SharedPreferences prefs = await SharedPreferences.getInstance();
-    String stringJson = prefs.getString("stringJson") ?? "";
-    // Person fnDecode = Person.fromJson(jsonDecode(stringJson));
+    String stringJson = prefs.getString("stringJson").toString();
     Person fnDecode = Person.fromJson(jsonDecode(stringJson));
     spJsonDataController.add(fnDecode);
   }

@@ -7,9 +7,9 @@ import 'package:training_moveon/utility/constants/font_manager.dart';
 import 'package:training_moveon/utility/constants/style_manager.dart';
 import 'package:training_moveon/utility/constants/values_manager.dart';
 
-import '../core/widgets/forms/form_field_wrapper.dart';
-import '../data/cartoon_item_description.dart';
-import '../utility/helpers/validator_logic.dart';
+import '../../core/widgets/forms/form_field_wrapper.dart';
+import '../../data/cartoon_item_description.dart';
+import '../../utility/helpers/validator_logic.dart';
 
 class DescriptionOfCartoon extends StatefulWidget {
   const DescriptionOfCartoon({super.key});

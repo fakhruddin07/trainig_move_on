@@ -11,7 +11,7 @@ import 'package:training_moveon/utility/constants/font_manager.dart';
 import 'package:training_moveon/utility/constants/style_manager.dart';
 import 'package:training_moveon/utility/constants/values_manager.dart';
 
-import '../utility/constants/app_spacing.dart';
+import '../../utility/constants/app_spacing.dart';
 
 class CheckOutScreen extends StatefulWidget {
   final IconData? leadingIcon;
@@ -78,9 +78,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
         scrolledUnderElevation: 0,
         actions: [
           IconButton(
-            onPressed: () {
-              // Navigator.pop(context);
-            },
+            onPressed: () {},
             style: IconButton.styleFrom(
               splashFactory: NoSplash.splashFactory,
               backgroundColor: Colors.transparent,
@@ -94,9 +92,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
             ),
           ),
           IconButton(
-            onPressed: () {
-              // Navigator.pop(context);
-            },
+            onPressed: () {},
             style: IconButton.styleFrom(
               splashFactory: NoSplash.splashFactory,
               backgroundColor: Colors.transparent,
