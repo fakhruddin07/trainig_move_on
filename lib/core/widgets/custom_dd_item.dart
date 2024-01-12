@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:training_moveon/utility/constants/values_manager.dart';
 
 import '../../../utility/constants/app_spacing.dart';
 import '../../../utility/constants/colors.dart';
+import '../../utility/constants/font_manager.dart';
 
 class CustomDDItem extends StatelessWidget {
   final String imgUrl;
@@ -18,11 +20,11 @@ class CustomDDItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: const EdgeInsets.symmetric(horizontal: 8),
+        padding: const EdgeInsets.symmetric(horizontal: AppPadding.p8),
         height: 40,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: selectedValue == label ? kEEEEEE : Colors.transparent,
+          color: selectedValue == label ? kEEEEEE : kTransparent,
           borderRadius: const BorderRadius.all(Radius.circular(4.0)),
           // border: Border.all(color: kBorderColor),
         ),
@@ -40,7 +42,7 @@ class CustomDDItem extends StatelessWidget {
             Text(
               label,
               style: TextStyle(
-                  fontSize: 14,
+                  fontSize: FontSize.s14,
                   fontWeight: FontWeight.w400,
                   color: selectedValue == label ? Colors.black : Colors.black),
             ),

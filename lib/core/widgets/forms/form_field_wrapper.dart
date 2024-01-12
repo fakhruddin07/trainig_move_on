@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:training_moveon/utility/constants/font_manager.dart';
 
 import '../../../../utility/constants/app_spacing.dart';
 import '../../../../utility/constants/colors.dart';
@@ -37,8 +38,8 @@ class FormFieldWrapper extends StatelessWidget {
               isRequired?const TextSpan(
                 text: '*',
                 style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 14,
+                    fontWeight: FontWeightManager.regular,
+                    fontSize: FontSize.s14,
                     color: Colors.red),
               ): const TextSpan(
                 text: '',

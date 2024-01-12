@@ -14,7 +14,7 @@ class CustomImage extends StatelessWidget {
     super.key,
     required this.imgUrl,
     this.imgHeight,
-    this.imgWidth,
+    this.imgWidth = 348,
     this.imgFit,
     this.boxShape = BoxShape.rectangle,
     this.borderRadius = 0,
@@ -23,7 +23,7 @@ class CustomImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: imgWidth ?? 348,
+      width: imgWidth,
       height: imgHeight,
       child: CachedNetworkImage(
         imageUrl: imgUrl,

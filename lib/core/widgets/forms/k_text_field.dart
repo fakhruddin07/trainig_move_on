@@ -19,36 +19,39 @@ class KTextField extends StatelessWidget {
   final TextInputAction? inputAction;
   final EdgeInsets contentPadding;
   final int maxLines;
+  final double borderRadius;
 
-  const KTextField(
-      {super.key,
-      required this.controller,
-      this.prefixIcon,
-      this.fillColor,
-      this.hintColor = kA0A0A0,
-      this.validator,
-      this.keyboardType = TextInputType.name,
-      this.onTap,
-      this.onChanged,
-      this.suffixIcon,
-      this.suffix,
-      this.numberFormatters = false,
-      this.obscureText = false,
-      this.hintText,
-      this.inputAction,
-      this.maxLines = 1,
-      this.contentPadding = const EdgeInsets.symmetric(
-        horizontal: 10,
-        vertical: 10,
-      ),
-      this.readOnly = false});
+  const KTextField({
+    super.key,
+    required this.controller,
+    this.prefixIcon,
+    this.fillColor,
+    this.hintColor = kA0A0A0,
+    this.validator,
+    this.keyboardType = TextInputType.name,
+    this.onTap,
+    this.onChanged,
+    this.suffixIcon,
+    this.suffix,
+    this.numberFormatters = false,
+    this.obscureText = false,
+    this.hintText,
+    this.inputAction,
+    this.maxLines = 1,
+    this.contentPadding = const EdgeInsets.symmetric(
+      horizontal: 10,
+      vertical: 10,
+    ),
+    this.borderRadius = 4,
+    this.readOnly = false,
+  });
   final bool obscureText, numberFormatters;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
-      style: const TextStyle( fontSize: 14),
+      style: const TextStyle(fontSize: 14),
       validator: validator,
       cursorColor: kBaseColor,
       decoration: InputDecoration(
@@ -66,15 +69,19 @@ class KTextField extends StatelessWidget {
         prefixIcon: prefixIcon,
         focusedBorder: OutlineInputBorder(
           borderSide: const BorderSide(color: kBaseColor),
-          borderRadius: BorderRadius.circular(4),
+          borderRadius: BorderRadius.circular(borderRadius),
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: kDDDDDD, ),
-          borderRadius: BorderRadius.circular(4),
+          borderSide: const BorderSide(
+            color: kDDDDDD,
+          ),
+          borderRadius: BorderRadius.circular(borderRadius),
         ),
         border: OutlineInputBorder(
-          borderSide: const BorderSide(color: kDDDDDD, ),
-          borderRadius: BorderRadius.circular(4),
+          borderSide: const BorderSide(
+            color: kDDDDDD,
+          ),
+          borderRadius: BorderRadius.circular(borderRadius),
         ),
         suffixIcon: suffixIcon,
         // suffixIconConstraints: const BoxConstraints(maxHeight: 14),
@@ -98,7 +105,7 @@ class KTextField extends StatelessWidget {
         if (numberFormatters)
           FilteringTextInputFormatter.allow(RegExp('[0-9]')),
       ],
-        onChanged: onChanged,
+      onChanged: onChanged,
     );
   }
 }

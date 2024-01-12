@@ -1,21 +1,27 @@
 import 'package:flutter/material.dart';
 
-import '../../../utility/constants/colors.dart';
-
 class HeadLine2 extends StatelessWidget {
-  String text;
-
-
-  HeadLine2({super.key, required this.text});
+  final String text;
+  final Color textColor;
+  final double fontSize;
+  final FontWeight fontWeight;
+  const HeadLine2({
+    super.key,
+    required this.text,
+    required this.textColor,
+    required this.fontSize,
+    required this.fontWeight,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: const TextStyle(
-          color: kTextBlackColor,
-          fontSize: 14,
-          fontWeight: FontWeight.w700),
+      style: TextStyle(
+        color: textColor,
+        fontSize: fontSize,
+        fontWeight: fontWeight,
+      ),
     );
   }
 }

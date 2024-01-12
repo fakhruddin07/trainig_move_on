@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:training_moveon/utility/constants/font_manager.dart';
 import '../../../utility/constants/colors.dart';
 
 class ConRichTxt extends StatelessWidget {
@@ -6,6 +7,9 @@ class ConRichTxt extends StatelessWidget {
   final String suffixTxt;
   Color? prefixClr;
   Color? suffixClr;
+  double? prefixFontSize;
+  double? suffixFontSize;
+  FontWeight? prefixWeight;
   FontWeight? suffixWeight;
   ConRichTxt({
     super.key,
@@ -13,6 +17,9 @@ class ConRichTxt extends StatelessWidget {
     required this.suffixTxt,
     this.prefixClr,
     this.suffixClr,
+    this.prefixFontSize,
+    this.suffixFontSize,
+    this.prefixWeight,
     this.suffixWeight,
   });
 
@@ -22,15 +29,15 @@ class ConRichTxt extends StatelessWidget {
       text: TextSpan(
         text: prefixTxt,
         style: TextStyle(
-          fontSize: 14,
+          fontSize: prefixFontSize ?? FontSize.s14,
           color: prefixClr ?? kTextBlackColor,
-          fontWeight: FontWeight.w700,
+          fontWeight: prefixWeight ?? FontWeight.w700,
         ),
         children: [
           TextSpan(
             text: suffixTxt,
             style: TextStyle(
-              fontSize: 14,
+              fontSize: suffixFontSize ?? FontSize.s14,
               color: suffixClr??kTextGrayColor,
               fontWeight: suffixWeight?? FontWeight.w400,
             ),

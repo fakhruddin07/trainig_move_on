@@ -15,7 +15,12 @@ class AppSpacing {
   static const horizontalSpacing24 = SizedBox(width: 24.0);
   static const horizontalSpacing32 = SizedBox(width: 32.0);
   static const horizontalSpacing34 = SizedBox(width: 34.0);
+  static const horizontalSpacing36 = SizedBox(width: 36.0);
   static const horizontalSpacing48 = SizedBox(width: 48.0);
+  static const horizontalSpacing50 = SizedBox(width: 50.0);
+  static const horizontalSpacing52 = SizedBox(width: 52.0);
+  static const horizontalSpacing54 = SizedBox(width: 54.0);
+  static const horizontalSpacing56 = SizedBox(width: 56.0);
 
   static const verticalSpacing2 = SizedBox(height: 2.0);
   static const verticalSpacing4 = SizedBox(height: 4.0);
@@ -28,6 +33,8 @@ class AppSpacing {
   static const verticalSpacing18 = SizedBox(height: 18.0);
   static const verticalSpacing20 = SizedBox(height: 20.0);
   static const verticalSpacing24 = SizedBox(height: 24.0);
+  static const verticalSpacing26 = SizedBox(height: 26.0);
+  static const verticalSpacing28 = SizedBox(height: 28.0);
   static const verticalSpacing32 = SizedBox(height: 32.0);
   static const verticalSpacing48 = SizedBox(height: 48.0);
 }

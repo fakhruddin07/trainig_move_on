@@ -16,6 +16,19 @@ class ImageAssets {
   static String welcomeLogoPng = "$IMAGE_PATH/welcome_logo.png";
   static String stepperLogoPng = "$IMAGE_PATH/stepper_logo.png";
   static String customerServicePng = "$IMAGE_PATH/customer_service.png";
+  static String boxPng = "$IMAGE_PATH/boxPng.png";
+  static String uploadPng = "$IMAGE_PATH/uploadPng.png";
+  static String percentPng = "$IMAGE_PATH/percent_png.png";
+  static String walletPng = "$IMAGE_PATH/wallet_png.png";
+  static String cardPng = "$IMAGE_PATH/card_png.png";
+  static String bankPng = "$IMAGE_PATH/bank_png.png";
+  static String cityBankPng = "$IMAGE_PATH/city_bank_png.png";
+  static String bracBankPng = "$IMAGE_PATH/brac_bank_png.png";
+  static String dbblPng = "$IMAGE_PATH/dbbl_png.png";
+  static String bkashPng = "$IMAGE_PATH/bkash_png.png";
+  static String rocketPng = "$IMAGE_PATH/rocket_png.png";
+  static String nagadPng = "$IMAGE_PATH/nagad_png.png";
+  static String upayPng = "$IMAGE_PATH/upay_png.png";
 }
 
 class JsonAssets {

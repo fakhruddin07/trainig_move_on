@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 
 const kTextBlackColor = Color(0xFF121212);
 const kTextGrayColor = Color(0xFF707070);
-const kBaseColor = Color(0xFF638239);
+const kBaseColorLegacy = Color(0xFF638239);
+const kBaseColor = Color(0xFF00893C);
 const kBaseColor2 = Color(0xFFF1F6E9);
 const kBadgeColor = Color(0xFFFA3E3E);
 const kLineColor = Color(0xFFDDDDDD);
@@ -25,6 +26,17 @@ const kF2C881 = Color(0xFFF2C881);
 const kFF4C4C = Color(0xFFFF4C4C);
 const kF3F5F4 = Color(0xFFF3F5F4);
 const kECFAF3 = Color(0xFFECFAF3);
+const k18B25F = Color(0xFF18B25F);
+const kE8F8EF = Color(0xFFE8F8EF);
+const kFF9100 = Color(0xFFFF9100);
+const k008454 = Color(0xFF008454);
+const kD9D9D9 = Color(0xFFD9D9D9);
+const kF8F8F8 = Color(0xFFF8F8F8);
+const k006BFF = Color(0xFF006BFF);
+const k6B717A = Color(0xFF6B717A);
+const kF5F5F5 = Color(0xFFF5F5F5);
+const k1DBF73 = Color(0xFF1DBF73);
+const k006A4E = Color(0xFF006A4E);
 const kTransparent = Colors.transparent;
 
 const kLightGreyColor = Color(0xFFF4ECFF);

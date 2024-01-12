@@ -1,18 +1,25 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:training_moveon/screen/filter_screen/filter_screen.dart';
-import 'package:training_moveon/screen/items_screen/items.dart';
-import 'package:training_moveon/screen/routes/routes_name.dart';
+import 'package:training_moveon/screen/routes/app_router.gr.dart';
 import 'package:training_moveon/utility/constants/app_spacing.dart';
 
 import '../../common_widgets/button_widget.dart';
 import '../../utility/constants/colors.dart';
 import '../../utility/constants/font_manager.dart';
 import '../../utility/constants/style_manager.dart';
-import '../description_of_cartoon_screen/description_of_cartoon.dart';
+import '../MoveOn Screens/description_of_cartoon_screen/description_of_cartoon.dart';
+import '../MoveOn Screens/filter_screen/filter_screen.dart';
+import '../MoveOn Screens/items_screen/items.dart';
 
-class HomeScreen extends StatelessWidget {
+@RoutePage()
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,34 +45,95 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             AppSpacing.verticalSpacing2,
-            const ButtonWidget(
+            ButtonWidget(
+              buttonTitle: "Skeletons Screen",
+              onTap: () {
+                context.router.push(const SkeletonsRoute());
+              },
+            ),
+            AppSpacing.verticalSpacing2,
+            ButtonWidget(
               buttonTitle: "Shared Preferences and Stream with JSON",
-              routeName: RoutesName.spStreamJson,
+              onTap: () {
+                context.router.push(const StreamJsonOne());
+              },
             ),
             AppSpacing.verticalSpacing2,
-            const ButtonWidget(
+            ButtonWidget(
               buttonTitle: "Shared Preferences and Stream with String",
-              routeName: RoutesName.practiceSpStreamString,
+              onTap: () {
+                context.router.push(const SPAndStreamRoute1());
+              },
             ),
             AppSpacing.verticalSpacing2,
-            const ButtonWidget(
+            ButtonWidget(
               buttonTitle: "Practice Shimmer Effect",
-              routeName: RoutesName.practiceShimmerEffect,
+              onTap: () {
+                context.router.push(const PracticeShimmerEffect());
+              },
             ),
             AppSpacing.verticalSpacing2,
-            const ButtonWidget(
+            ButtonWidget(
               buttonTitle: "Practice Custom Scroll View",
-              routeName: RoutesName.practiceCustomScrollView,
+              onTap: () {
+                context.router.push(const PracticeCustomScrollView());
+              },
             ),
             AppSpacing.verticalSpacing2,
-            const ButtonWidget(
+            ButtonWidget(
               buttonTitle: "Flutter Inspector Demo",
-              routeName: RoutesName.flutterInspectorDemo,
+              onTap: () {
+                context.router.push(const FlutterInspectorDemo());
+              },
             ),
             AppSpacing.verticalSpacing2,
-            const ButtonWidget(
+            ButtonWidget(
               buttonTitle: "Practice Check List Tile Widget",
-              routeName: RoutesName.checkListTileWidget,
+              onTap: () {
+                context.router.push(const PracticeCheckListTileWidget());
+              },
+            ),
+            AppSpacing.verticalSpacing2,
+            ButtonWidget(
+              buttonTitle: "Practice Theme",
+              onTap: () {
+                context.router.push(const PracticeTheme());
+              },
+            ),
+            AppSpacing.verticalSpacing2,
+            ButtonWidget(
+              buttonTitle: "Practice DIO GET method",
+              onTap: () {
+                context.router.push(const DioGetMethod());
+              },
+            ),
+            AppSpacing.verticalSpacing2,
+            ButtonWidget(
+              buttonTitle: "Practice DIO POST method",
+              onTap: () {
+                context.router.push(const DioPostMethod());
+              },
+            ),
+            AppSpacing.verticalSpacing2,
+            ButtonWidget(
+              buttonTitle: "Practice Flutter Hooks",
+              onTap: () {
+                context.router.push(const PracticeFlutterHooks());
+              },
+            ),
+            AppSpacing.verticalSpacing2,
+            ButtonWidget(
+              buttonTitle: "Bloc Practice",
+              onTap: () {
+                context.router.push(const BlocPractice());
+              },
+            ),
+            AppSpacing.verticalSpacing2,
+            ButtonWidget(
+              buttonTitle: "Practice Ship For Me",
+              onTap: () {
+                context.router.push(const PracticeShipForMe());
+              },
             ),
             AppSpacing.verticalSpacing2,
             const Divider(
@@ -81,9 +149,32 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             AppSpacing.verticalSpacing2,
-            const ButtonWidget(
+            ButtonWidget(
               buttonTitle: "Checkout",
-              routeName: RoutesName.checkOutScreen,
+              onTap: () {
+                context.router.push(CheckOutRoute());
+              },
+            ),
+            AppSpacing.verticalSpacing2,
+            ButtonWidget(
+              buttonTitle: "Payment Screen",
+              onTap: () {
+                context.router.push(const PaymentRoute());
+              },
+            ),
+            AppSpacing.verticalSpacing2,
+            ButtonWidget(
+              buttonTitle: "Shopping Cart",
+              onTap: () {
+                context.router.push(const ShoppingCartRoute());
+              },
+            ),
+            AppSpacing.verticalSpacing2,
+            ButtonWidget(
+              buttonTitle: "Wallet Screen",
+              onTap: () {
+                context.router.push(const WalletRoute());
+              },
             ),
             AppSpacing.verticalSpacing2,
             ElevatedButton(
@@ -155,14 +246,32 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             AppSpacing.verticalSpacing2,
-            const ButtonWidget(
+            ButtonWidget(
               buttonTitle: "Product Details Screen",
-              routeName: RoutesName.productDetailsScreen,
+              onTap: () {
+                context.router.push(const ProductDetailsRoute());
+              },
             ),
             AppSpacing.verticalSpacing2,
-            const ButtonWidget(
+            ButtonWidget(
               buttonTitle: "Ship For Me",
-              routeName: RoutesName.shipForMeScreen,
+              onTap: () {
+                context.router.push(const ShipForMeRoute());
+              },
+            ),
+            AppSpacing.verticalSpacing2,
+            ButtonWidget(
+              buttonTitle: "Products",
+              onTap: () {
+                context.router.push(const ProductsRoute());
+              },
+            ),
+            AppSpacing.verticalSpacing2,
+            ButtonWidget(
+              buttonTitle: "My Orders Screen",
+              onTap: () {
+                context.router.push(const MyOrdersRoute());
+              },
             ),
             AppSpacing.verticalSpacing2,
           ],
