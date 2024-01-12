@@ -8,6 +8,8 @@ import 'package:training_moveon/utility/constants/font_manager.dart';
 import 'package:training_moveon/utility/constants/style_manager.dart';
 import 'package:training_moveon/utility/constants/values_manager.dart';
 
+import '../../../routes/app_router.gr.dart';
+
 @RoutePage()
 class StreamJsonOne extends StatefulWidget {
   const StreamJsonOne({super.key});
@@ -86,7 +88,7 @@ class _StreamJsonOneState extends State<StreamJsonOne> {
             AppSpacing.verticalSpacing8,
             ElevatedButton(
               onPressed: () {
-                context.router.push(StreamJsonTwo());
+                context.router.push(const StreamJsonTwo());
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: kBaseColor,

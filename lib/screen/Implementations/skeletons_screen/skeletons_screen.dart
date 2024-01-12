@@ -33,7 +33,7 @@ class SkeletonsScreen extends StatelessWidget {
             ButtonWidget(
               buttonTitle: "Product List Skeletons",
               onTap: () {
-                context.router.push(const ProductDetailSkeletons());
+                context.router.push(const ProductListSkeleton());
               },
             ),
           ],

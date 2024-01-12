@@ -8,6 +8,7 @@ import 'package:training_moveon/utility/constants/font_manager.dart';
 import 'package:training_moveon/utility/constants/style_manager.dart';
 
 import '../../../common_widgets/button_widget.dart';
+import '../../routes/app_router.gr.dart';
 
 @RoutePage()
 class DioPostMethod extends StatefulWidget {
@@ -67,7 +68,7 @@ class _DioPostMethodState extends State<DioPostMethod> {
               child: ButtonWidget(
                 buttonTitle: "Add",
                 onTap: () {
-                  context.router.push(DioGetMethod());
+                  context.router.push(const DioGetMethod());
                 },
               ),
             ),
